@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Prime Numbers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <!-- <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css"/> -->
+</head>
+<body>
+    <style>
+        body {
+    background-color: #f8f9fa;
+}
+.container {
+    margin-top: 50px;
+}
+.response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+}
+    </style>
+    <div class="main-container">
+        <h1>Find Prime Numbers</h1>
+        <form id="prime-form">
+            {% csrf_token %}
+            <label for="input_number">Enter a number:</label>
+            <input type="number" id="input_number" name="input_number">
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="response">
+            <!-- The prime numbers will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
