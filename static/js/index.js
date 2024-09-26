@@ -13,7 +13,7 @@ $(document).ready(function() {
             data: formData,
             dataType: 'json',
             success: function(response) {
-                $('#response').removeClass('alert-danger').addClass('alert alert-success').html('<strong>Success:</strong> ' + response.success).fadeIn();
+                $('#response').removeClass('alert-danger').addClass('alert alert-success').html('<strong>Success:</strong><br> ' + response.success).fadeIn();
                 $('#input_number').val('');
             },
             error: function(xhr) {
@@ -23,7 +23,7 @@ $(document).ready(function() {
                     errorHtml += '<li>' + value + '</li>';
                 });
                 errorHtml += '</ul>';
-                $('#response').removeClass('alert-success').addClass('alert alert-danger').html('<strong>Error:</strong> <ul>' + errorHtml + '</ul>').fadeIn();
+                $('#response').removeClass('alert-success').addClass('alert alert-danger').html(errorHtml).fadeIn();
                 $('#input_number').val('');
             }
         });
