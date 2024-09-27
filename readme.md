@@ -1,6 +1,6 @@
 # Prime Number Fetcher
 
-CAUTION ---- If you cloned the repo. please follow the readme file to setup this project on your local machine
+CAUTION ---- Please follow this readme file to setup this project on your local machine
 
 This project is a simple web application built with Django that allows users to input a number and receive a list of all prime numbers up to that number. The limit of the input number is 100 you can change it by updating the LIMIT in .env file
 
